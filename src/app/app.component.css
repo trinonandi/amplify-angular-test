@@ -1,0 +1,214 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+body, p, a, span, div, input, button {
+  font-size: 20px;
+}
+
+.centered-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  flex-shrink: 0;
+  padding: 20px;
+  background: white;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.background-content {
+  /*margin-top: px;*/
+  /*padding-top: 2px;*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+  color: #408abd;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button-container, .button-container-ins {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container-ins {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.background-button{
+  padding-bottom: 28px;
+}
+
+.instruction-button, .btn-primary {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: #0F67B1;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.instruction-button:hover, .btn-primary:hover {
+  background: #004d8f;
+}
+
+.counters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #f96853;
+  font-family: 'Arial', sans-serif;
+  border-bottom: #f96853 solid 1px;
+}
+
+.chat-card-container {
+  width: 100%;
+}
+
+.counter-button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+app-chat-card {
+  display: block;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.correct-counter {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.wrong-counter {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.thank-you-message {
+  font-size: 35px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+.final-score-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.final-score-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.final-score {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.score {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.correct-score {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.wrong-score {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

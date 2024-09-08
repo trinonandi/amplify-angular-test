@@ -1,0 +1,181 @@
+<div  *ngIf="isConversation(instruction.conversation)">
+  <div class="centered-card ">
+    <div *ngIf="instruction.conversation.inputType === 'text'">
+      <div *ngIf="!showAudio" class="centered-text">
+        <div>
+          <i><u><b>Fill in the blank and press the "Submit" button</b></u></i>
+        </div>
+      </div>
+      <div *ngIf="!showAudio" class="content"><b>You: </b>{{ instruction.conversation.content }}</div>
+      <form *ngIf="!showAudio" #textInputForm="ngForm" (ngSubmit)="submitForm(textInputForm)">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="textInput"
+            placeholder="Type your response..."
+            [(ngModel)]="textInput"
+            required>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary submit-button"
+          [disabled]="textInputForm.invalid">
+          Submit
+        </button>
+      </form>
+      <div *ngIf="showAudio">
+        <div class = "centered-text">
+          <i><u><b>Click the "Start Recording" button and read the words below out loud. After you are done, press the "Stop Recording" button</b></u></i>
+        </div>
+        <p class="content"><b>You: </b>{{ currentAnswer }}</p>
+        <!--        <div class="alert alert-success">-->
+        <!--          Start Recording!-->
+        <!--        </div>-->
+
+        <button
+          *ngIf="!audioEnds"
+          class="custom-btn button-container"
+          [ngClass]="isRecording ? 'stop-recording' : 'start-recording'"
+          (click)="toggleRecording()">
+          {{ isRecording ? 'Stop Recording' : 'Start Recording' }}
+        </button>
+
+        <!--        <audio *ngIf="audioUrl" controls [src]="audioUrl"></audio>-->
+
+        <!--        <div *ngIf="loading" class="d-flex align-items-center">-->
+        <!--          <strong>Loading...Wait for your result</strong>-->
+        <!--          <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+        <!--        </div>-->
+
+        <div *ngIf="backendResponse && !loading" class="alert alert-danger">
+          <b>Your result:</b> {{ backendResponse }}
+        </div>
+
+<!--        <button-->
+<!--          class="btn btn-success move-forward"-->
+<!--          *ngIf="audioEnds"-->
+<!--          (click)="getNextChat()">-->
+<!--          Move Forward-->
+<!--        </button>-->
+      </div>
+    </div>
+    <div *ngIf="instruction.conversation.inputType === 'radio'">
+      <div *ngIf="!showAudio" class="centered-text">
+      <div>
+        <i><u><b>Fill in the blank and press the "Submit" button</b></u></i>
+      </div>
+    </div>
+      <p *ngIf="!showAudio" class="content"><b>You: </b>{{ instruction.conversation.content }}</p>
+      <form *ngIf="!showAudio" #radioForm="ngForm" (ngSubmit)="submitForm(radioForm)">
+        <div class="form-group button-group">
+          <button
+            *ngFor="let option of instruction.conversation.options"
+            type="button"
+            class="btn option-button"
+            [ngClass]="{'btn-warning': selectedOption === option, 'btn-secondary': selectedOption !== option, 'btn-success': correctAnswer && selectedOption === option}"
+            (click)="selectOption(option)">
+            {{ option }}
+          </button>
+        </div>
+        <div *ngIf="showTryAgainDiv && attempts === 1" class="color-text-danger">
+          <b>Let’s think again, what would be a better way to fill in this blank?</b>
+        </div>
+        <div *ngIf="showTryAgainDiv && attempts === 2" class="color-text-danger">
+          <b>Not quite, let's try one more time. What would be a better way to fill in this blank?</b>
+        </div>
+        <button [disabled]="!selectedOption || correctAnswer" class="btn btn-primary submit-button" type="submit">
+          Submit
+        </button>
+      </form>
+      <div *ngIf="showAudio">
+        <div *ngIf="showCorrectAnswer">
+          <div class ="color-text-danger">
+            Not Quite! The correct answer is: <b>{{ instruction.conversation.correctAnswer }}</b><br>
+
+          </div>
+        </div>
+        <div class = "centered-text">
+          <i><u><b>Click the "Start Recording" button and read the words below out loud. After you are done, press the "Stop Recording" button</b></u></i>
+        </div>
+        <p class="content"><b>You: </b>{{ currentAnswer }}</p>
+        <div class ="color-text" *ngIf="!showCorrectAnswer">
+          <b>Correct!</b>
+        </div>
+        <button
+          *ngIf="!audioEnds"
+          class="custom-btn button-container"
+          [ngClass]="isRecording ? 'stop-recording' : 'start-recording'"
+          (click)="toggleRecording()">
+          {{ isRecording ? 'Stop Recording' : 'Start Recording' }}
+        </button>
+
+        <!--        <audio *ngIf="audioUrl" controls [src]="audioUrl"></audio>-->
+
+        <!--        <div *ngIf="loading" class="d-flex align-items-center">-->
+        <!--          <strong>Loading...Wait for your result</strong>-->
+        <!--          <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+        <!--        </div>-->
+
+        <div *ngIf="backendResponse" class="alert alert-info">
+          Your Result: {{ backendResponse }} <br>
+
+        </div>
+
+        <!--        <div *ngIf="recordingAttempts > 0 && !allAttemptsUsed && recordingAttempts < 3 && backendResponse !== 'Correct'"-->
+        <!--             class="alert alert-warning">-->
+        <!--          Try Again! Attempt {{ recordingAttempts }} of 3.-->
+        <!--        </div>-->
+        <!--        <div *ngIf="backendResponse" class="alert alert-info">-->
+        <!--          <b>Transcription:</b> {{ transcription }} <br>-->
+        <!--        </div>-->
+<!--        <button-->
+<!--          class="btn btn-success move-forward"-->
+<!--          *ngIf="audioEnds"-->
+<!--          (click)="getNextChat()">-->
+<!--          Move Forward-->
+<!--        </button>-->
+      </div>
+    </div>
+    <div *ngIf="instruction.conversation.inputType === ''">
+      <div class = "centered-text">
+        <i><u><b>Click the "Start Recording" button and read the words below out loud. After you are done, press the "Stop Recording" button</b></u></i>
+      </div>
+      <p class="content"><b>You: </b>{{ instruction.conversation.content }}</p>
+<!--      <div>-->
+<!--        <i><u>Note</u>: Read the above words out loud after clicking the "starting recording" button</i>-->
+<!--      </div>-->
+      <button
+        class="custom-btn button-container"
+        *ngIf="!audioEnds"
+        [ngClass]="isRecording ? 'stop-recording' : 'start-recording'"
+        (click)="toggleRecording()">
+        {{ isRecording ? 'Stop Recording' : 'Start Recording' }}
+      </button>
+
+      <!--      <audio *ngIf="audioUrl" controls [src]="audioUrl"></audio>-->
+
+      <!--      <div *ngIf="loading" class="d-flex align-items-center">-->
+      <!--        <strong>Loading...Wait for your result</strong>-->
+      <!--        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+      <!--      </div>-->
+
+      <div *ngIf="backendResponse" class="alert alert-info">
+        Your Result: {{ backendResponse }}
+      </div>
+
+<!--      <button-->
+<!--        class="btn btn-success move-forward"-->
+<!--        *ngIf="audioEnds"-->
+<!--        (click)="nextIns()">-->
+<!--        Move Forward-->
+<!--      </button>-->
+      <!--      <button-->
+      <!--        class="btn btn-success move-forward"-->
+      <!--        *ngIf="isRecording || !audioUrl"-->
+      <!--        (click)="nextIns()">-->
+      <!--        Move Forward-->
+      <!--      </button>-->
+    </div>
+  </div>
+</div>

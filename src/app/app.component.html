@@ -1,0 +1,57 @@
+<div class="centered-card">
+  <div class="card">
+    <div class="card-body">
+      <div *ngIf="notToggleStart">
+        <div *ngIf="instructionPresent">
+          <h2 class="heading">Welcome to the Peer Mediation Role-Play Activity!</h2>
+          <div class="button-container">
+            <button (click)="clickInstruction()" class="btn btn-primary">Background</button>
+          </div>
+        </div>
+
+        <div *ngIf="!instructionPresent" class="background-content">
+          <b> Background: </b> Dali and Nova used to be friends before Nova started playing with Uri, who has always been mean to Dali. Ever since then, Dali has started talking about Nova whenever Nova walks by in the hallways. At first, Nova ignores the comments, but a few days ago, he has had enough. Nova confronts Dali during lunch, which leads them to fight in the middle of the cafeteria. They're stopped shortly after and are sent to peer mediation the next morning.
+          <div class="button-container">
+            <button (click)="clickInstructionNext()" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="showChat && !startChatWindow" class="app-container button-container chat-area">
+        <button (click)="startChat()" class="btn btn-primary">Start Mediation</button>
+      </div>
+
+      <div *ngIf="startChatWindow && !endOfChat" class="chat-card-container button-counters">
+        <div class="header-container">
+          <div class="button-container-ins background-button">
+            <button *ngIf="!toggleSection" (click)="toggleInstructions()" class="btn btn-light btn-sm instruction-button">Show Background</button>
+            <button *ngIf="toggleSection" (click)="toggleInstructions()" class="btn btn-light btn-sm instruction-button">Collapse Background</button>
+          </div>
+          <div class="counters">
+            <span class="counter-button correct-counter"><b>Correct:</b> {{ correctCount }}</span>
+            <span class="counter-button wrong-counter"><b>Wrong:</b> {{ wrongCount }}</span>
+          </div>
+        </div>
+        <div *ngIf="toggleSection" class="background-content">
+          <b> Background: </b> Dali and Nova used to be friends before Nova started playing with Uri, who has always been mean to Dali. Ever since then, Dali has started talking about Nova whenever Nova walks by in the hallways. At first, Nova ignores the comments, but a few days ago, he has had enough. Nova confronts Dali during lunch, which leads them to fight in the middle of the cafeteria. They're stopped shortly after and are sent to peer mediation the next morning.
+        </div>
+        <app-chat-card
+          *ngIf="showChat"
+          (answerCounter)="handleCounter($event)"
+        ></app-chat-card>
+      </div>
+      <div *ngIf="startChatWindow && endOfChat" class="chat-card-container button-counters">
+        <div class="thank-you-message"> Thank You for Playing!</div>
+        <div class="final-score-container">
+          <h2 class="final-score-title">Final Score</h2>
+          <div class="final-score">
+            <div class="score correct-score">Correct: {{ correctCount }}</div>
+            <div class="score wrong-score">Wrong: {{ wrongCount }}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

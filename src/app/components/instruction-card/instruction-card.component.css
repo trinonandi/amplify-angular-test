@@ -1,0 +1,250 @@
+body, p, a, span, div, input, button {
+  font-size: 20px;
+}
+.content {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.option-button {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+}
+
+.submit-button {
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #0F67B1;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+/*.move-forward:disabled {*/
+
+/*  margin-top: 10px;*/
+/*  padding: 10px 20px;*/
+
+/*  background-color: #ccc;*/
+/*  cursor: not-allowed;*/
+
+/*  border: 1px solid #ccc;*/
+/*  border-radius: 5px;*/
+/*  !*background: #3498db; !* Blue background *!*!*/
+/*  color: white; !* White text *!*/
+/*  font-size: 16px;*/
+/*  font-weight: bold;*/
+/*  !*cursor: pointer;*!*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alert {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #ff0017;
+}
+
+.color-text {
+  color: #116726;
+  animation: uniqueFadeOut 4s forwards;
+}
+.color-text-danger {
+  color: #ff0017;
+  animation: uniqueFadeOut 12s forwards;
+}
+
+@keyframes uniqueFadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+.custom-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+/*.custom-btn.recording {*/
+/*  background-color: #dc3545;*/
+/*}*/
+
+/*.custom-btn.idle {*/
+/*  background-color: #6c757d;*/
+/*}*/
+
+/*.custom-btn:disabled {*/
+/*  background-color: #ccc;*/
+/*  color: #666;*/
+/*  cursor: not-allowed;*/
+/*}*/
+
+.start-recording {
+  background: #28a745;
+  /*border-color: #28a745;*/
+  border: 1px solid #ccc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.stop-recording {
+  background: #dc3545;
+  /*border-color: #dc3545;*/
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.start-recording:hover {
+  background: #218838;
+  border: 1px solid #ccc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.stop-recording:hover {
+  background: #c82333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ccc;
+}
+
+
+audio {
+  margin: 10px 0;
+}
+
+
+.move-forward {
+  margin-left: 15px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  align-self: flex-end;
+  /*display: flex;*/
+  /*margin-left: auto;*/
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background: #0F67B1;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.centered-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+

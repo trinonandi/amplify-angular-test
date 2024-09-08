@@ -1,0 +1,393 @@
+[
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Hello everyone, welcome to peer mediation. My name is ___. I will help you work through your conflict today. What are your names?",
+      "inputType": "text",
+      "options": []
+    },
+    "audio": "",
+    "round": 1
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Hi I am Dali",
+    "audio": "peer-mediation-script-audio-files/Dali-intro.wav",
+    "round": 0
+  },
+
+  {
+    "actor": "Nova",
+    "conversation": "Hello, I’m Nova",
+    "audio": "peer-mediation-script-audio-files/Nova-intro.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Thanks! Mediation is a way to resolve your dispute in a peaceful and collaborative manner. My role as a peer mediator is to be ___ and actively listen. As a peer mediator, I will listen fully to each point of view.",
+      "inputType": "radio",
+      "options": [
+        "judgemental",
+        "neutral",
+        "funny"
+      ],
+      "correctAnswer": "neutral"
+    },
+    "audio": "",
+    "round": 2
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "You should be patient, flexible, and listen to one another. You should be respectful and not ___ one another. Dali, let’s start with you.",
+      "inputType": "radio",
+      "options": [
+        "wrestle",
+        "listen to",
+        "interrupt"
+      ],
+      "correctAnswer": "interrupt"
+    },
+    "audio": "",
+    "round": 3
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Sure, basically last week I found out that the person who was supposed to be my friend started playing with Uri, who is always really mean to me. I was not cool with that. I mean, who plays with their friend’s bully?",
+    "audio": "peer-mediation-script-audio-files/Dali_1.wav",
+    "round": 0
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Bro, you were not–",
+    "audio": "peer-mediation-script-audio-files/Nova_1.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Nova, I'll get to your story in a little bit but before that, let's let Dali have a chance to share what he would like without getting interrupted.",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 5
+  },
+  {
+    "actor": "Dali",
+    "conversation": "I am really mad because we were friends or I thought we were friends, until he started hanging out with Uri. I've been seeing the two of them around and I can't help but say something.",
+    "audio": "peer-mediation-script-audio-files/Dali_2.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "To make sure I have things right, you noticed Nova is playing with Uri, who has always been mean to you. After learning about this, you started ___. Does this sound right?",
+      "inputType": "radio",
+      "options": [
+        "making comments about how you were feeling",
+        "spreading false rumors about Nova",
+        "ignoring Nova during recess"
+      ],
+      "correctAnswer": "making comments about how you were feeling"
+    },
+    "audio": "",
+    "round": 6
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Yeah, pretty much. Then on Friday, I said something to Nova during lunch and started walking away. All of a sudden he shoves me from behind. I was not going to take it so I pushed him back, but yeah, we got sent to the office real quick.",
+    "audio": "peer-mediation-script-audio-files/Dali_3.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "I appreciate you sharing all of this. Nova, thank you for waiting, I would ___",
+      "inputType": "radio",
+      "options": [
+        "now like to discuss how to improve things",
+        "now like to hear how things went down on your end",
+        "now like to end our discussion"
+      ],
+      "correctAnswer": "now like to hear how things went down on your end"
+    },
+    "audio": "",
+    "round": 7
+  },
+  {
+    "actor": "Nova",
+    "conversation": "I've wanted to play with Uri for a while. I know Uri is pretty mean to Dali, but she's nice to me, and we both like soccer. She even taught me a trick to kick the ball far. I was going to tell Dali! But I was scared because I knew he would be upset. Lately, Dali has been making comments when I pass him in the hallway. I know he's mad, but he should have talked to me. At lunch the other day, he said something to my face, and I snapped. I didn’t hit him. I just grabbed his shoulder to talk, and he shoved me. Before I could do anything, the teacher sent us here. So, yeah, that's what happened.",
+    "audio": "peer-mediation-script-audio-files/Nova_2.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Thank you, Nova. It seems like this situation has been ___. Is that right?",
+      "inputType": "radio",
+      "options": [
+        "pretty frustrating and hard to deal with",
+        "boring",
+        "annoying and but manageable"
+      ],
+      "correctAnswer": "pretty frustrating and hard to deal with"
+    },
+    "audio": "",
+    "round": 8
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yeah.",
+    "audio": "peer-mediation-script-audio-files/Nova_3.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": " I appreciate that you both have been so willing to share. Now, I’m going to ask a couple of questions to help me figure out what both of you would like to get out of this conversation. Does this work for both of you?",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 9
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Yeah, whatever.",
+    "audio": "peer-mediation-script-audio-files/Dali_4.wav",
+    "round": 0
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yep.",
+    "audio": "peer-mediation-script-audio-files/Nova_4.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Okay, knowing more information from both of you, I am going to try to come up with a ___. Let’s start with you, Dali. What do you think is important to you?",
+      "inputType": "radio",
+      "options": [
+        "punishment for Dali",
+        "punishment for Nova",
+        "win-win situation"
+      ],
+      "correctAnswer": "win-win situation"
+    },
+    "audio": "",
+    "round": 10
+  },
+  {
+    "actor": "Dali",
+    "conversation": "I don’t know. I just think it was really messed up what Nova did. We were friends! Friends don’t go behind each others’ backs! And he doesn’t even seem to care that much, right? He did not even look like he felt bad for what he did to me!",
+    "audio": "peer-mediation-script-audio-files/Dali_5.wav",
+    "round": 0
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Hey, I did—",
+    "audio": "peer-mediation-script-audio-files/Nova_5.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Nova, I know you want to share and you will get a turn, but remember, I am asking ___, please.",
+      "inputType": "radio",
+      "options": [
+        "both of you not to interrupt",
+        "only you, Nova, to not interrupt",
+        "both of you to laugh"
+      ],
+      "correctAnswer": "both of you not to interrupt"
+    },
+    "audio": "",
+    "round": 11
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yeah, sorry.",
+    "audio": "peer-mediation-script-audio-files/Nova_6.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Going back to what you said, Dali, it sounds like you were pretty hurt by Nova's actions but also, you were hurt that ___. Is that correct?",
+      "inputType": "radio",
+      "options": [
+        "he went to the teacher to tell on you",
+        "he didn’t talk to you about it",
+        "he played with Uri"
+      ],
+      "correctAnswer": "he didn’t talk to you about it"
+    },
+    "audio": "",
+    "round": 12
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Yeah. I really just wanted him to talk to me because honestly, it was more about the friendship than about Uri.",
+    "audio": "peer-mediation-script-audio-files/Dali_6.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "How would you feel if you got an apology from Nova?",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 13
+  },
+  {
+    "actor": "Dali",
+    "conversation": "I think I could just move on then.",
+    "audio": "peer-mediation-script-audio-files/Dali_7.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Nova, what do you think you need in this situation?",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 14
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Finally! I just want him to leave us alone. I get that I could have told him earlier but he really needs to just chill.",
+    "audio": "peer-mediation-script-audio-files/Nova_7.wav",
+    "round": 0
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Chill?!",
+    "audio": "peer-mediation-script-audio-files/Dali_8.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Hold on. Let’s make sure to hear Nova out fully.",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 15
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yeah, I just want to move on.",
+    "audio": "peer-mediation-script-audio-files/Nova_8.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "What does that exactly look like for you, Nova?",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 16
+  },
+  {
+    "actor": "Nova",
+    "conversation": "I guess I don’t think we should hang out anymore.",
+    "audio": "peer-mediation-script-audio-files/Nova_9.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "I appreciate you sharing honestly. Dali, how do you feel about the possibility of not staying friends after this mediation is over?",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 17
+  },
+  {
+    "actor": "Dali",
+    "conversation": "I don’t know. I don’t like it, but also, I get it and kinda feel the same way at this point. I just want him to apologize to me.",
+    "audio": "peer-mediation-script-audio-files/Dali_9.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Okay, so what I am hearing is that Dali, you would like ___",
+      "inputType": "radio",
+      "options": [
+        "Nova to stop being friends with Uri",
+        "an apology from Nova about not talking to him earlier",
+        "for Uri to scolded by the teacher for being mean to Dali"
+      ],
+      "correctAnswer": "an apology from Nova about not talking to him earlier"
+    },
+    "audio": "",
+    "round": 18
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "I am also hearing that both of you want to ___, but continue to be respectful of each other. What do you two think about these terms?",
+      "inputType": "radio",
+      "options": [
+        "move on and no longer be friends",
+        "be friends again",
+        "play soccer together"
+      ],
+      "correctAnswer": "move on and no longer be friends"
+    },
+    "audio": "",
+    "round": 19
+  },
+  {
+    "actor": "Nova",
+    "conversation": "I’m good with that.",
+    "audio": "peer-mediation-script-audio-files/Nova_10.wav",
+    "round": 0
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Okay with me. I will go play with my other friends instead then.",
+    "audio": "peer-mediation-script-audio-files/Dali_10.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Ok, it looks like we have an agreement. Thank you so much for participating in today’s mediation. I hope that this was helpful to both of you. If you ever want another mediation, please let me know and I’d be happy to help!",
+      "inputType": "",
+      "options": []
+    },
+    "audio": "",
+    "round": 20
+  },
+  {
+    "actor": "Dali",
+    "conversation": "Okay thanks.",
+    "audio": "peer-mediation-script-audio-files/Dali_11.wav",
+    "round": 0
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yeah, see you around!",
+    "audio": "peer-mediation-script-audio-files/Nova_11.wav",
+    "round": 0
+  },
+  {
+    "actor": "Nova",
+    "conversation": "Yeah, see you around!",
+    "audio": "peer-mediation-script-audio-files/Nova_11.wav",
+    "round": 0
+  }
+]

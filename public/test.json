@@ -1,0 +1,55 @@
+[
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Hello everyone, welcome to your mediation. My name is ___. I am glad you are here to mediate and I look forward to helping you work through your conflict today. What are your names?",
+      "inputType": "text",
+      "options": []
+    },
+    "audio": "",
+    "round": 1
+  },
+  {
+    "actor": "Jacob",
+    "conversation": "Hi I am Jacob",
+    "audio": "peer-mediation-script-audio-files/Jacob-intro.wav",
+    "round": 0
+  },
+
+  {
+    "actor": "Caleb",
+    "conversation": "Hello, I’m Caleb",
+    "audio": "peer-mediation-script-audio-files/Caleb-intro.wav",
+    "round": 0
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Thanks! Really quickly, I'd like to tell you about mediation. Mediation is a way to resolve your dispute in a peaceful and collaborative manner. My role as a mediator is to be ___ and actively listen. As mediator, I will not take sides and will listen fully to each point of view.\n",
+      "inputType": "radio",
+      "options": [
+        "judgemental",
+        "neutral",
+        "funny"
+      ],
+      "correctAnswer": "neutral"
+    },
+    "audio": "",
+    "round": 2
+  },
+  {
+    "actor": "Mediator",
+    "conversation": {
+      "content": "Your role will be to be patient, flexible, and to listen to one another. You should be respectful and not ___ one another. Also, listen and think about the other person’s point of view.",
+      "inputType": "radio",
+      "options": [
+        "wrestle",
+        "listen to",
+        "interrupt"
+      ],
+      "correctAnswer": "interrupt"
+    },
+    "audio": "",
+    "round": 3
+  }
+  ]

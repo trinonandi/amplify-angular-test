@@ -1,0 +1,29 @@
+<div class="chat-area">
+  <div  class="chat-window">Conversation Begins! </div>
+  <div *ngFor="let chat of chatHistory" class="chat-bubble-container" [ngClass]="chat.cssClass">
+    <img *ngIf="chat.person === 'Dali' && chat.dpUrl" class="chat-dp-jacob " [src]="chat.dpUrl" alt="DP">
+    <img *ngIf="chat.person === 'Nova' && chat.dpUrl" class="chat-dp-caleb " [src]="chat.dpUrl" alt="DP">
+    <div class="chat-bubble" [ngClass]="chat.cssClass" *ngIf="chat.person !== ''">
+      <b *ngIf="chat.person === 'Dali' || chat.person === 'Nova'">{{ chat.person }}</b>
+      <b *ngIf="chat.person === 'Mediator'">{{ chat.person }} (You)</b>
+      :  {{ chat.response }}
+    </div>
+  </div>
+  <div *ngIf="endChat" class="thank-you-message"> Thank You for Playing!</div>
+</div>
+<div class = "constant-window">
+  <b>Workspace</b>
+</div>
+<div class="inst-card-1" *ngIf="currInstruction.actor !== 'Mediator' && !endChat">
+  <div class="hazy-stripes">
+    <h2 class="hazy-stripes-text thank-you-message">Wait for your turn</h2>
+  </div>
+</div>
+
+<div class="inst-card-2" *ngIf="currInstruction.actor === 'Mediator' && !endChat">
+  <app-instruction-card
+    [instruction]="currInstruction"
+    (onComplete)="getNext($event)"
+    (incrementCorrectOrWrong)="handleAnswer($event)">
+  </app-instruction-card>
+</div>

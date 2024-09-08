@@ -1,0 +1,189 @@
+body, p, a, span, div, input, button {
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.chat-area {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  /*background: linear-gradient(135deg, #FFFADD 55%, lightpink 45%);*/
+
+  /*background: linear-gradient(135deg, rgba(250, 209, 218, 0.68) 25%, transparent 25%, transparent 50%, rgba(250, 209, 218, 0.68) 50%, rgba(250, 209, 218, 0.68) 75%, transparent 75%, transparent);*/
+
+  /*background: linear-gradient(135deg, #FFFADD 25%, transparent 25%, transparent 50%, #FFFADD 50%, rgba(250, 209, 218, 0.68) 75%, transparent 75%, transparent);*/
+  background-color: rgba(194, 233, 244, 0.82);
+  position: relative;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.constant-window{
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  /*background: linear-gradient(135deg, rgba(173, 209, 241, 0.79) 25%, transparent 25%, transparent 50%, rgba(85, 93, 179, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent);*/
+  position: relative;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.chat-dp-jacob, .chat-dp-caleb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-dp-caleb {
+  align-self: flex-end;
+}
+
+.chat-bubble-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 20px;
+}
+
+.chat-bubble-container .mediator-class {
+  color: #8a5f00;
+  background-color: #FFDE95;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.chat-bubble-container .jacob-class {
+  color: #ffff;
+  background-color: #667BC6;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  margin-left: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  align-self: flex-start;
+  border-radius: 0 20px 20px 20px ;
+}
+
+.chat-bubble-container .caleb-class {
+  color: #004747;
+  background-color: #83C0C1;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  margin-right: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  align-self: flex-end;
+  border-radius: 20px 0 20px 20px ;
+}
+
+button {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: #DA7297;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.inst-card-1, .inst-card-2 {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inst-card-1 {
+  height: 100px;
+}
+
+.inst-card-2 {
+  height: 500px;
+}
+
+.hazy-stripes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.hazy-stripes-text {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  color: #333;
+}
+.chat-window {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.thank-you-message {
+  font-size: 35px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
